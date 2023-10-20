@@ -1,6 +1,5 @@
 #pragma once
 #include "gui.h"
-//#include "esp.h"
 
 #include "../../imgui/imgui.h"
 #include "../../imgui/imgui_impl_dx9.h"
@@ -260,30 +259,6 @@ void gui::Render() noexcept
 
 	//ImGui::SliderFloat("Smoothing", &smoothing, 1, 20, "%.3f", 0);
 	//ImGui::SliderFloat("Lock FOV", &lockFov, 1, 200, "%.3f", 0);
-
-	/*
-	// VERY SUSSY DELETE SOON
-
-	espMath::view_matrix_t guiMatrix = memory.Read<espMath::view_matrix_t>(client + offset::dwViewMatrix);
-
-	
-
-	// View Matrix display table
-
-	if (ImGui::BeginTable("table1", 4))
-	{
-		for (int row = 0; row < 4; row++)
-		{
-			ImGui::TableNextRow();
-			for (int column = 0; column < 4; column++)
-			{
-				ImGui::TableSetColumnIndex(column);
-				ImGui::Text("%.3f", guiMatrix.matrix[row][column]);
-			}
-		}
-		ImGui::EndTable();
-	}
-	*/
 
 	ImGui::End();
 }

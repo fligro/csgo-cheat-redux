@@ -1,1 +1,3 @@
-# csgo-cheat-redux
+## csgo-cheat-redux
+
+# TODO: Fix gui, add aimbot 

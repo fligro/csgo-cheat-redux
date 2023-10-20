@@ -18,11 +18,11 @@ int __stdcall wWinMain(
 		assert(overlay.is_initialized());
 		Logger("Created overlay");
 
-		/*// Create GUI
+		// Create GUI
 		gui::CreateHWindow("Cheat Menu", "Cheat Menu Class");
 		gui::CreateDevice();
 		gui::CreateImGui();
-		*/
+		
 		// Create DX renderer
 		forceinline::dx_renderer renderer = overlay.create_renderer();
 		
@@ -34,18 +34,18 @@ int __stdcall wWinMain(
 		
 		while (gui::exit)
 		{
-			/*
+			
 			std::thread render_gui([&]() -> void {
 				while (true) {
 					std::this_thread::sleep_for(std::chrono::milliseconds(1));
-
+					
 					gui::BeginRender();
 					gui::Render();
 					gui::EndRender();
 					Logger("Gui render thread complete");
 				}
 				});
-			*/
+			
 
 			//Create a thread to read info so we don't slow down our rendering part
 			std::thread read_ent_info([&]() -> void {
